@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head(pageTitle='Edit Employee')" />
+<body>
+	<div th:replace="fragments :: header"></div>
+	<div align="center">
+		<h1>Edit Employee</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${employee}" method="post">
+			<table></table>
+				<tr>
+					<td>Employee ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+				</tr>			
+				<tr>
+					<td>FirsrName:</td>
+					<td><input type="text" th:field="*{FirstName}" /></td>
+				</tr>
+				<tr>
+					<td>LastName:</td>
+					<td><input type="text" th:field="*{LastName}" /></td>
+				</tr>				
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" th:field="*{Email}" /></td>
+				</tr>				
+				<tr>
+					<td>Address:</td>
+					<td><input type="text" th:field="*{Address}" /></td>
+				</tr>				
+				<tr>
+					<td colspan="2"><button type="submit" class="btn btn-primary">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

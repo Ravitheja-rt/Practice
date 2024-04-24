@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+
+<head th:replace="fragments :: html_head(pageTitle='Employee Management - Home')" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<body>
+<div class="container text-center">
+	<div><h1>Employee Management</h1></div>
+	<div>
+		<br/>
+		<h4><a th:href="@{/employeeList}">View all employees</a></h4>
+		<br/>
+		<h4><a th:href="@{/newEmployeeForm}">add New Employee</a></h4>
+		<br/>
+	</div>
+</div>
+</body>
+</html>
